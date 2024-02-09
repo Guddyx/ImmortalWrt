@@ -24,9 +24,8 @@ rm -rf mosdns
 #添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
-cp -rf feeds\passwall\luci-app-passwall feeds/luci/applications/luci-app-passwall
-cp -rf feeds\passwall\luci-app-passwall feeds/luci/applications/luci-app-passwall
-cp -rf feeds\passwall_packages\gn feeds\packages\net
-cp -rf feeds\passwall_packages\ssocks feeds\packages\net
+cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
+cp -rf passwall_packages/gn feeds/packages/net
+cp -rf passwall_packages/ssocks feeds/packages/net
 rm -rf passwall_packages
 rm -rf passwall
