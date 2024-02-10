@@ -14,7 +14,7 @@
 sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
 
 # 移除要替换的包
-rm -rf feeds\luci\applications\luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall
 
 # 添加luci-app-mosdns
 git clone https://github.com/sbwml/luci-app-mosdns.git mosdns
