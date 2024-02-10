@@ -29,3 +29,6 @@ cp -rf passwall_packages/gn feeds/packages/net
 cp -rf passwall_packages/ssocks feeds/packages/net
 rm -rf passwall_packages
 rm -rf passwall
+
+#安装Clang
+sudo apt install clang
