@@ -18,15 +18,6 @@ sudo apt install -y clang
 
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
-#rm -rf feeds/packages/net/mosdns
-#rm -rf feeds/packages/lang/golang
-
-# 添加luci-app-mosdns
-#git clone https://github.com/sbwml/luci-app-mosdns.git mosdns
-#git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-#cp -rf mosdns/luci-app-mosdns feeds/luci/applications/luci-app-mosdns
-#cp -rf mosdns/mosdns feeds/packages/net/mosdns
-#rm -rf mosdns
 
 #添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
