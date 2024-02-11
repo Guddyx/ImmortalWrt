@@ -22,6 +22,7 @@ rm -rf feeds/packages/net/mosdns
 
 # 添加luci-app-mosdns
 git clone https://github.com/sbwml/luci-app-mosdns.git mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/geodata
 cp -rf mosdns/luci-app-mosdns feeds/luci/applications/luci-app-mosdns
 cp -rf mosdns/mosdns feeds/packages/net/mosdns
 rm -rf mosdns
