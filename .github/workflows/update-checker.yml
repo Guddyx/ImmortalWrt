@@ -1,19 +1,25 @@
 #
-# Copyright (c) 2019-2021 P3TERX <https://p3terx.com>
+# Copyright (c) 2019-2021 smallprogram
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 #
-# https://github.com/P3TERX/Actions-OpenWrt
-# File: .github/workflows/update-checker.yml
+# https://github.com/smallprogram/OpenWrtAction
+# File: .github/workflows/Update_Checker.yml
 # Description: Source code update checker
 #
 
-name: Update Checker
+name: Update_Checker
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
-  REPO_BRANCH: openwrt-23.05
+  REPO_URL_Immortalwrt: https://github.com/immortalwrt/immortalwrt.git
+  REPO_BRANCH_Immortalwrt: openwrt-23.05
+  REPO_PATH_Immortalwrt : "immortalwrt"
+
+  REPO_URL_PassWall: https://github.com/xiaorouji/openwrt-passwall
+  REPO_BRANCH_PassWall: main
+  REPO_PATH_PassWall : "openwrt-passwall"
+
 
 on:
   workflow_dispatch:
@@ -29,24 +35,44 @@ jobs:
     - name: Get Commit Hash
       id: getHash
       run: |
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH .
-        echo "commitHash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+      
+        git clone --depth 1 $REPO_URL_Immortalwrt -b $REPO_BRANCH_Immortalwrt $REPO_PATH_Immortalwrt
+        cd $REPO_PATH_Immortalwrt
+        echo "commitHash_Immortalwrt=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        cd
+
+        git clone --depth 1 $REPO_URL_PassWall -b $REPO_BRANCH_PassWall $REPO_PATH_PassWall
+        cd $REPO_PATH_PassWall
+        echo "commitHash_PassWall=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        cd
         
+    - name: Show Commit Head and Combination Heads
+      id: combHeader
+      run: |
+        echo "commitHash_Immortalwrt: ${{ steps.getHash.outputs.commitHash_Immortalwrt }}"
+        echo "commitHash_PassWall: ${{ steps.getHash.outputs.commitHash_PassWall }}"
+        echo "commitHash_All=\
+          ${{steps.getHash.outputs.commitHash_Immortalwrt}}\
+          ${{steps.getHash.outputs.commitHash_PassWall}}" >> $GITHUB_OUTPUT
+
     - name: Compare Commit Hash
       id: cacheHash
       uses: actions/cache@v4.0.0
       with:
-        path: .commitHash
-        key: HEAD-${{ steps.getHash.outputs.commitHash }}
+        path: .commitHash_All
+        key: HEAD-${{ steps.combHeader.outputs.commitHash_All }}
+   
 
     - name: Save New Commit Hash
       if: steps.cacheHash.outputs.cache-hit != 'true'
       run: |
-        echo ${{ steps.getHash.outputs.commitHash }} | tee .commitHash
+        echo ${{ steps.getHash.outputs.commitHash_Immortalwrt }} | tee .commitHash_Immortalwrt
+        echo ${{ steps.getHash.outputs.commitHash_PassWall }} | tee .commitHash_PassWall
+        echo ${{ steps.combHeader.outputs.commitHash_All }} | tee .commitHash_All   
         
     - name: Trigger build
       if: steps.cacheHash.outputs.cache-hit != 'true'
-      uses: peter-evans/repository-dispatch@main
+      uses: peter-evans/repository-dispatch@v3.0.0
       with:
         token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
         event-type: Source Code Update
@@ -56,3 +82,4 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 1
+   
