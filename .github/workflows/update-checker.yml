@@ -13,7 +13,7 @@ name: Update_Checker
 
 env:
   REPO_URL_Immortalwrt: https://github.com/immortalwrt/immortalwrt.git
-  REPO_BRANCH_Immortalwrt: openwrt-23.05
+  REPO_BRANCH_Immortalwrt: master
   REPO_PATH_Immortalwrt : "immortalwrt"
 
   REPO_URL_PassWall: https://github.com/xiaorouji/openwrt-passwall
