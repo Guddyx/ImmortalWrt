@@ -18,11 +18,13 @@ sudo apt install -y clang
 
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/packages/net/chinadns-ng
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
+cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 rm -rf passwall_packages
