@@ -23,7 +23,7 @@ rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
-cp -rf passwall_packages/gn feeds/packages/net
-cp -rf passwall_packages/ssocks feeds/packages/net
+cp -rf passwall_packages/gn feeds/packages/net/gn
+cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 rm -rf passwall_packages
 rm -rf passwall
