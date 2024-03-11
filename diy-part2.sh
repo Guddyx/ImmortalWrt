@@ -29,3 +29,7 @@ cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 rm -rf passwall_packages
 rm -rf passwall
+
+# 添加
+git clone https://github.com/sbwml/luci-app-mosdns.git mosdns
+cp -rf mosdns/luci-app-mosdns feeds/luci/applications/luci-app-mosdns
