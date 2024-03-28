@@ -19,7 +19,7 @@ sudo apt install -y clang
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
-rm -rf feeds/packages/net/shadowsocks-libev
+
 
 
 # 添加luci-app-passwall
@@ -29,7 +29,6 @@ cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
-cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocks-libev
 rm -rf passwall_packages
 rm -rf passwall
 
