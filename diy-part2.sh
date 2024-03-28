@@ -19,8 +19,7 @@ sudo apt install -y clang
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
-
-
+rm -rf feeds/packages/net/shadowsocks-libev
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
