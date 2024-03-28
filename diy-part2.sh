@@ -20,6 +20,8 @@ sudo apt install -y clang
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/shadowsocks-libev
+rm -rf feeds/packages/net/simple-obfs
+
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
@@ -28,6 +30,7 @@ cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
+cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
 #rm -rf passwall_packages
 #rm -rf passwall
 
