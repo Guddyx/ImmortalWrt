@@ -24,11 +24,11 @@ sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generat
 
 
 # 添加luci-app-passwall
-#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 #cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 #cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
-#cp -rf passwall_packages/gn feeds/packages/net/gn
+cp -rf passwall_packages/gn feeds/packages/net/gn
 #cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 #cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
 #rm -rf passwall_packages
