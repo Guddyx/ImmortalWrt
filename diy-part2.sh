@@ -32,6 +32,10 @@ sudo update-alternatives --config g++
 gcc --version
 g++ --version
 
+# 安装Go
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
 # 安装Clang
 sudo apt install -y clang
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
