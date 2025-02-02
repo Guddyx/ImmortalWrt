@@ -33,7 +33,9 @@ gcc --version
 g++ --version
 
 # 安装Clang
-#sudo apt install -y clang
+sudo apt install -y clang
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
+cp -rf passwall_packages/gn package/feeds/packages/gn
 
 # 移除要替换的包
 #rm -rf feeds/luci/applications/luci-app-passwall
@@ -41,10 +43,7 @@ g++ --version
 #rm -rf feeds/packages/net/shadowsocks-libev
 #rm -rf feeds/packages/net/simple-obfs
 
-
 # 添加luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
-cp -rf passwall_packages/gn package/feeds/packages/gn
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 #cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 #cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
