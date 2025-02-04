@@ -56,3 +56,7 @@ cp -rf passwall_packages/gn package/feeds/packages/gn
 #rm -rf passwall_packages
 #rm -rf passwall
 
+echo 'refresh feeds'
+./scripts/feeds update -a
+./scripts/feeds install -a
+
