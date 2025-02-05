@@ -38,8 +38,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/l
 
 # 安装Clang
 sudo apt install -y clang
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
-cp -rf passwall_packages/gn package/feeds/packages/gn
+
 
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
@@ -49,6 +48,8 @@ rm -rf feeds/packages/net/shadowsocks-rust
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
+cp -rf passwall_packages/gn package/feeds/packages/gn
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
