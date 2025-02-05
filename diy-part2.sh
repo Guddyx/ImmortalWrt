@@ -39,7 +39,6 @@ git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/l
 # 安装Clang
 sudo apt install -y clang
 
-
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
