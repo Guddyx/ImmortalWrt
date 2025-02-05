@@ -44,8 +44,8 @@ cp -rf passwall_packages/gn package/feeds/packages/gn
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
-rm -rf feeds/packages/net/simple-obfs
 rm -rf feeds/packages/net/geoview
+rm -rf feeds/packages/net/shadowsocks-rust
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
@@ -55,6 +55,10 @@ cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
 cp -rf passwall_packages/geoview feeds/packages/net/geoview
 cp -rf passwall_packages/pdnsd-alt feeds/packages/net/pdnsd-alt
+cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
+cp -rf passwall_packages/shadowsocks-libev feeds/packages/net/shadowsocks-libev
+cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libev
+cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
 #rm -rf passwall_packages
 #rm -rf passwall
 
