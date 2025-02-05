@@ -46,6 +46,7 @@ rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/packages/net/simple-obfs
+rm -rf feeds/packages/net/geoview
 
 # 添加luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
@@ -53,6 +54,8 @@ cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
+cp -rf passwall_packages/geoview feeds/packages/net/geoview
+
 #rm -rf passwall_packages
 #rm -rf passwall
 
