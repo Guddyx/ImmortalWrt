@@ -52,7 +52,6 @@ cp -rf passwall_packages/gn package/feeds/packages/gn
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
-cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
 cp -rf passwall_packages/geoview feeds/packages/net/geoview
 cp -rf passwall_packages/pdnsd-alt feeds/packages/net/pdnsd-alt
 cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
