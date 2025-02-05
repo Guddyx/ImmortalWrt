@@ -44,7 +44,6 @@ cp -rf passwall_packages/gn package/feeds/packages/gn
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
-rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/packages/net/simple-obfs
 rm -rf feeds/packages/net/geoview
 
