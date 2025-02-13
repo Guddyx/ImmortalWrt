@@ -40,13 +40,13 @@ git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/l
 sudo apt install -y clang
 
 # 移除要替换的包
-rm -rf feeds/luci/applications/luci-app-passwall
+#rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/shadowsocks-rust
 
 # 添加luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 cp -rf passwall_packages/gn package/feeds/packages/gn
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
