@@ -49,7 +49,7 @@ rm -rf feeds/packages/net/hysteria
 
 # 添加luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
-cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
+#cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 cp -rf passwall_packages/gn package/feeds/packages/gn
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
