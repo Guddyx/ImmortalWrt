@@ -44,6 +44,8 @@ sudo apt install -y clang
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/shadowsocks-rust
+rm -rf feeds/packages/net/sing-box
+rm -rf feeds/packages/net/hysteria
 
 # 添加luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
@@ -58,6 +60,8 @@ cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
 cp -rf passwall_packages/shadowsocks-libev feeds/packages/net/shadowsocks-libev
 cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libev
 cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
+cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
+cp -rf passwall_packages/hysteria feeds/packages/net/hysteria
 #rm -rf passwall_packages
 #rm -rf passwall
 
