@@ -32,10 +32,6 @@ sudo update-alternatives --config g++
 gcc --version
 g++ --version
 
-# 安装Go
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
-
 # 安装Clang
 sudo apt install -y clang
 
@@ -47,12 +43,6 @@ rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/xray-core
-
-# 更新golang版本
-git clone https://github.com/coolsnowwolf/packages LEDE-packages
-rm -rf feeds/packages/lang/golang/golang
-cp -rf LEDE-packages/lang/golang/golang feeds/packages/lang/golang/golang 
-rm -rf LEDE-packages
 
 # 添加luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
