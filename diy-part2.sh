@@ -46,7 +46,13 @@ rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/hysteria
-#rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/xray-core
+
+# 更新golang版本
+git clone https://github.com/coolsnowwolf/packages LEDE-packages
+rm -rf feeds/packages/lang/golang/golang
+cp -rf LEDE-packages/lang/golang/golang feeds/packages/lang/golang/golang 
+rm -rf LEDE-packages
 
 # 添加luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
@@ -63,7 +69,7 @@ cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libe
 cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
 cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
 cp -rf passwall_packages/hysteria feeds/packages/net/hysteria
-#cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
+cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
 #rm -rf passwall_packages
 #rm -rf passwall
 
