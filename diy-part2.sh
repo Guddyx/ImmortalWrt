@@ -44,6 +44,8 @@ rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/hysteria
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/microsocks
+rm -rf feeds/packages/naiveproxy
+rm -rf feeds/packages/net/v2ray-core
 
 # 添加luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
@@ -62,6 +64,9 @@ cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
 cp -rf passwall_packages/hysteria feeds/packages/net/hysteria
 cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
 cp -rf passwall_packages/microsocks feeds/packages/net/microsocks
+cp -rf passwall_packages/naiveproxy feeds/packages/net/naiveproxy
+cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
+cp -rf passwall_packages/v2ray-core feeds/packages/net/v2ray-core
 #rm -rf passwall_packages
 #rm -rf passwall
 
