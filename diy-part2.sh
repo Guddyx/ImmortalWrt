@@ -40,7 +40,7 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 # 移除要替换的包
-#rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/shadowsocks-rust
@@ -53,8 +53,8 @@ rm -rf feeds/packages/net/v2ray-core
 rm -rf feeds/packages/net/v2ray-geodata
 
 # 添加luci-app-passwall
-#git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
-#cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
+cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
