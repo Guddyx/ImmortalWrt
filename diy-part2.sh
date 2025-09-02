@@ -36,8 +36,8 @@ g++ --version
 sudo apt install -y clang
 
 # 更新Go版本
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
