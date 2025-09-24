@@ -68,22 +68,25 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
-cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
+cp -rf passwall_packages/dns2socks feeds/packages/net/dns2socks
 cp -rf passwall_packages/geoview feeds/packages/net/geoview
-cp -rf passwall_packages/pdnsd-alt feeds/packages/net/pdnsd-alt
-cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
-cp -rf passwall_packages/shadowsocks-libev feeds/packages/net/shadowsocks-libev
-cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libev
-cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
-cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
 cp -rf passwall_packages/hysteria feeds/packages/net/hysteria
-cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
+cp -rf passwall_packages/ipt2socks feeds/packages/net/ipt2socks
 cp -rf passwall_packages/microsocks feeds/packages/net/microsocks
 cp -rf passwall_packages/naiveproxy feeds/packages/net/naiveproxy
+cp -rf passwall_packages/shadow-tls feeds/packages/net/shadow-tls
+cp -rf passwall_packages/shadowsocks-libev feeds/packages/net/shadowsocks-libev
+cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
+cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libev
+cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
+cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
+cp -rf passwall_packages/tcping feeds/packages/net/tcping
 cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
+cp -rf passwall_packages/tuic-client feeds/packages/net/tuic-client
 cp -rf passwall_packages/v2ray-core feeds/packages/net/v2ray-core
 cp -rf passwall_packages/v2ray-geodata feeds/packages/net/v2ray-geodata
-cp -rf passwall_packages/v2ray-geodata feeds/packages/net/ipt2socks
+cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
+cp -rf passwall_packages/xray-plugin feeds/packages/net/xray-plugin
 #rm -rf passwall_packages
 #rm -rf passwall
 
