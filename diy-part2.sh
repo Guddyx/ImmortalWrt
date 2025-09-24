@@ -18,22 +18,22 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt update
 
 # 安装最新的GCC（假设为GCC 11）
-sudo apt install gcc-11 g++-11
+#sudo apt install gcc-11 g++-11
 
 # 设置默认版本
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 100
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 100
+#sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 100
 
 # 配置默认版本
-sudo update-alternatives --config gcc
-sudo update-alternatives --config g++
+#sudo update-alternatives --config gcc
+#sudo update-alternatives --config g++
 
 # 验证安装
-gcc --version
-g++ --version
+#gcc --version
+#g++ --version
 
 # 安装Clang
-sudo apt install -y clang
+#sudo apt install -y clang
 
 # 更新Go版本
 rm -rf feeds/packages/lang/golang
@@ -42,16 +42,25 @@ git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/l
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/net/chinadns-ng
+rm -rf feeds/packages/net/dns2socks
 rm -rf feeds/packages/net/geoview
-rm -rf feeds/packages/net/shadowsocks-rust
-rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/hysteria
-rm -rf feeds/packages/net/xray-core
-rm -rf feeds/packages/microsocks
-rm -rf feeds/packages/naiveproxy
-rm -rf feeds/packages/net/v2ray-core
-rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/ipt2socks
+rm -rf feeds/packages/net/microsocks
+rm -rf feeds/packages/net/naiveproxy
+rm -rf feeds/packages/net/shadow-tls
+rm -rf feeds/packages/net/shadowsocks-libev
+rm -rf feeds/packages/net/shadowsocks-rust
+rm -rf feeds/packages/net/shadowsocksr-libev
+rm -rf feeds/packages/net/simple-obfs
+rm -rf feeds/packages/net/sing-box
+rm -rf feeds/packages/net/tcping
+rm -rf feeds/packages/net/trojan-plus
+rm -rf feeds/packages/net/tuic-client
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-plugin
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/xray-plugin
 
 
 # 添加luci-app-passwall
