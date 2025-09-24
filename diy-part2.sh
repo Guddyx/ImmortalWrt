@@ -58,7 +58,6 @@ rm -rf feeds/packages/net/ipt2socks
 git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
-cp -rf passwall_packages/gn feeds/packages/net/gn
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/ssocks feeds/packages/net/ssocks
 cp -rf passwall_packages/geoview feeds/packages/net/geoview
