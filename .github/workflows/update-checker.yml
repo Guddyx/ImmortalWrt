@@ -35,22 +35,15 @@ jobs:
     - name: Get Commit Hash
       id: getHash
       run: |
-      
         git clone --depth 1 $REPO_URL_Immortalwrt -b $REPO_BRANCH_Immortalwrt $REPO_PATH_Immortalwrt
         cd $REPO_PATH_Immortalwrt
         echo "commitHash_Immortalwrt=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
         cd
-
-        git clone --depth 1 $REPO_URL_PassWall -b $REPO_BRANCH_PassWall $REPO_PATH_PassWall
+        git clone --depth 1 https://${{ secrets.PASSWALL_PAT }}@github.com/xiaorouji/openwrt-passwall -b $REPO_BRANCH_PassWall $REPO_PATH_PassWall
         cd $REPO_PATH_PassWall
         echo "commitHash_PassWall=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
         cd
-
-    - name: Clone openwrt-passwall
-      run: git clone https://github.com/<owner>/openwrt-passwall.git
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+        
     - name: Show Commit Head and Combination Heads
       id: combHeader
       run: |
