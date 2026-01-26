@@ -16,7 +16,7 @@ env:
   REPO_BRANCH_Immortalwrt: master
   REPO_PATH_Immortalwrt : "immortalwrt"
 
-  REPO_URL_PassWall: https://github.com/xiaorouji/openwrt-passwall
+  REPO_URL_PassWall: https://github.com/Openwrt-Passwall/openwrt-passwall
   REPO_BRANCH_PassWall: main
   REPO_PATH_PassWall : "openwrt-passwall"
 
