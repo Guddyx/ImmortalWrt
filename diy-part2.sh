@@ -64,9 +64,9 @@ rm -rf feeds/packages/net/xray-plugin
 
 
 # 添加luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall.git passwall
 cp -rf passwall/luci-app-passwall feeds/luci/applications/luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git passwall_packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git passwall_packages
 cp -rf passwall_packages/chinadns-ng feeds/packages/net/chinadns-ng
 cp -rf passwall_packages/dns2socks feeds/packages/net/dns2socks
 cp -rf passwall_packages/geoview feeds/packages/net/geoview
