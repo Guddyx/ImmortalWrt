@@ -45,7 +45,12 @@ jobs:
         cd $REPO_PATH_PassWall
         echo "commitHash_PassWall=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
         cd
-        
+
+    - name: Clone openwrt-passwall
+      run: git clone https://github.com/<owner>/openwrt-passwall.git
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
     - name: Show Commit Head and Combination Heads
       id: combHeader
       run: |
