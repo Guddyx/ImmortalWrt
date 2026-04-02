@@ -40,9 +40,9 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # 更新为LEDE-rust包
-rm -rf feeds/packages/lang/rust
-git clone https://github.com/coolsnowwolf/packages LEDE-packages
-cp -rf LEDE-packages/lang/rust feeds/packages/lang/rust
+#rm -rf feeds/packages/lang/rust
+#git clone https://github.com/coolsnowwolf/packages LEDE-packages
+#cp -rf LEDE-packages/lang/rust feeds/packages/lang/rust
  
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-passwall
