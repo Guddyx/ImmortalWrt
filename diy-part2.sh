@@ -60,8 +60,6 @@ rm -rf feeds/packages/net/shadowsocksr-libev
 rm -rf feeds/packages/net/simple-obfs
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/tcping
-rm -rf feeds/packages/net/trojan-plus
-rm -rf feeds/packages/net/tuic-client
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/v2ray-plugin
 rm -rf feeds/packages/net/xray-core
@@ -86,8 +84,6 @@ cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libe
 cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
 cp -rf passwall_packages/sing-box feeds/packages/net/sing-box
 cp -rf passwall_packages/tcping feeds/packages/net/tcping
-cp -rf passwall_packages/trojan-plus feeds/packages/net/trojan-plus
-cp -rf passwall_packages/tuic-client feeds/packages/net/tuic-client
 cp -rf passwall_packages/v2ray-core feeds/packages/net/v2ray-core
 cp -rf passwall_packages/v2ray-geodata feeds/packages/net/v2ray-geodata
 cp -rf passwall_packages/xray-core feeds/packages/net/xray-core
