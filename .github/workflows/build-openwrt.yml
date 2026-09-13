@@ -171,18 +171,10 @@ jobs:
         keep_minimum_runs: 3
 
     - name: Remove old Releases
+      uses: Guddyx/delete-older-releases@master
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+      with:
+        keep_latest: 3
+        delete_tags: true
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        set -euo pipefail
-        REPO="${{ github.repository }}"
-        KEEP=10
-        i=0
-        while IFS= read -r tag; do
-          if [ "$i" -ge "$KEEP" ]; then
-            echo "Deleting release (and tag): $tag"
-            gh release delete "$tag" --yes --cleanup-tag -R "$REPO" || true
-          fi
-          i=$((i + 1))
-        done < <(gh api "repos/${REPO}/releases" --paginate --jq '.[] | .tag_name')
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
