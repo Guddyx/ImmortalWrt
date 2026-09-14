@@ -54,7 +54,6 @@ rm -rf feeds/packages/net/ipt2socks
 rm -rf feeds/packages/net/microsocks
 rm -rf feeds/packages/net/naiveproxy
 rm -rf feeds/packages/net/shadow-tls
-rm -rf feeds/packages/net/shadowsocks-libev
 rm -rf feeds/packages/net/shadowsocks-rust
 rm -rf feeds/packages/net/shadowsocksr-libev
 rm -rf feeds/packages/net/simple-obfs
@@ -78,7 +77,6 @@ cp -rf passwall_packages/ipt2socks feeds/packages/net/ipt2socks
 cp -rf passwall_packages/microsocks feeds/packages/net/microsocks
 cp -rf passwall_packages/naiveproxy feeds/packages/net/naiveproxy
 cp -rf passwall_packages/shadow-tls feeds/packages/net/shadow-tls
-cp -rf passwall_packages/shadowsocks-libev feeds/packages/net/shadowsocks-libev
 cp -rf passwall_packages/shadowsocks-rust feeds/packages/net/shadowsocks-rust
 cp -rf passwall_packages/shadowsocksr-libev feeds/packages/net/shadowsocksr-libev
 cp -rf passwall_packages/simple-obfs feeds/packages/net/simple-obfs
