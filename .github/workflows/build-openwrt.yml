@@ -165,7 +165,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@main
+      uses: Guddyx/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 3
