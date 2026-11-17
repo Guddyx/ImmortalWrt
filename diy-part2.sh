@@ -92,7 +92,7 @@ cp -rf passwall_packages/xray-plugin feeds/packages/net/xray-plugin
 # 修复： ERROR: package/feeds/packages/rust [host] failed to build.
 # 根据https://github.com/immortalwrt/packages/issues/1607
 # 注意：只有云编译CI环境需要！！！本地编译无需这个补丁
-#sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
 # Fix Rust build: preserve upstream *.orig files
 # 这rust害人不浅，本地编译和github编译都出错。
