@@ -35,6 +35,12 @@ sudo apt update
 # 安装Clang
 #sudo apt install -y clang
 
+# Ensure Rust has the target required by shadow-tls and other musl packages.
+rustup toolchain install stable --profile minimal
+rustup target add --toolchain stable x86_64-unknown-linux-musl
+rustc --print sysroot
+rustup target list --installed | grep '^x86_64-unknown-linux-musl$'
+
 # 更新Go版本
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 27.x feeds/packages/lang/golang
